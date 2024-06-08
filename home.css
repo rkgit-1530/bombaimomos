@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Varela Round;
+}
+body{
+    transition-duration: 3s;
+}
+html{
+    scroll-behavior: smooth;
+}
+.home{
+    height: 100vh;
+    background:url(image/bg7.jpg);
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    position:sticky;
+    top: 5px;
+
+}
+header .brand h2{
+    color: rgb(6, 6, 6);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+header ul{
+    margin-top: 20px;
+}
+header ul li{
+    display: inline;
+    margin-right: 20px;
+
+}
+header ul li a{
+    text-decoration: none;
+    color: rgb(16, 16, 16);
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    border: 2px solid transparent;
+    transition: 0.3s ease-in;
+    padding: 5px;
+}
+header ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom:-5px;
+    left: 0;
+    background-color: #090909;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  header ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+ .slogan{
+    width: 400px;
+    height: 400px;
+    margin-left: 25%;
+    margin-top: 50px;
+    border-radius: 22px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 5px black;
+ }
+ .slogan h2,a{
+    margin-top: 130px;
+}
+ .slogan a{
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 22px;
+    background-color: rgb(216, 216, 5);
+    color: rgb(11, 11, 11);
+    margin-bottom: 50px;
+    transition: 0.25s ease-in;
+    
+ }
+ .slogan a:hover{
+    background-color: black;
+    color: rgb(216, 216, 5);
+    transform: translatey(0,-10%);
+    box-shadow: 10px 10px 5px black;
+ }
+ .slogan h2{
+    color:rgba(207, 207, 14, 0.836);
+    margin-top: 100px;
+    padding-top: 50px;
+ }
+ .menu{
+    background: url(image/bg7.jpg);
+    height: 100%;
+    width: 100%;
+
+ }
+ .momolist{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-area: 
+  "momos1" "momos2" "momos3" "momos4"
+  "momos5" "momos6" "momos7" "momos8";
+  row-gap: 8px;
+  column-gap: 8px;
+
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 22px;
+    padding: 10px;
+    padding-top: 30px;
+    
+ }
+ .momolist img{
+    border-radius: 22px;
+    margin-right: 20px;
+ }
+ .momolist a{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 12px;
+    background-color: yellow;
+    border-radius: 22px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    margin-right: 90px;
+    padding-left: 10px;
+    transition: 0.25s;
+ }
+ .momolist a:hover{
+    color: yellow;
+    background-color: black;
+ }
+ @media (max-width: 768px ) {
+  .momolist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .momos1,.momos2,.momos3,.momos4 ,.momos5,.momos6,.momos7,.momos8 {
+      margin-left: 20px;
+  } */
+}
+ @media (max-width: 426px ) {
+    .momolist {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .momos1,.momos2,.momos3,.momos4 ,.momos5,.momos6,.momos7,.momos8 {
+        margin-left: 20px;
+    }
+    .slogan{
+      display: none;
+    }
+    header ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      margin-top: 80px;
+      margin-right: 100px !important;
+      margin-bottom: 10px;
+      width: 80px;
+      background-color: #090909;
+      border-radius: 22px;
+      
+  }
+  header ul li{
+      display: inline;
+      padding: 20px;
+      margin-right: 10px;
+     
+  
+  }
+  header ul li a{
+      text-decoration: none;
+      color: yellow;
+      font-size: 10px;
+      position: relative;
+      border: 2px solid transparent;
+      transition: 0.3s ease-in;
+      padding: 5px;
+  }
+  header ul li a i{
+    padding: 5px;
+  }
+  header ul li a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 4px;
+      bottom:-5px;
+      left: 0;
+      background-color: #090909;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+  
+    header ul li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
